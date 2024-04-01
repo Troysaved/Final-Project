@@ -36,4 +36,34 @@ nav {
 }
 
 
+.intro-container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.viz-1__graph {
+    flex: 1;
+
+}
+
+.viz-1__heading {
+    padding-bottom: 12px;
+}
+
+.viz-1__para{
+    flex: 1;
+}
+
+.viz-1__container{
+    text-align: center;
+
+}
+
+.viz-1__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
