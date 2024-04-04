@@ -54,8 +54,8 @@ penguins.then(function(data) {
   // Y Axis Label
   svg.append("text")
     .attr("transform", "rotate(-90)")
-    .attr("y", 0 - margin.left + 40)
-    .attr("x",0 - (height / 2))
+    .attr("y", 0 - margin.left + 60)
+    .attr("x",40 - (height / 2))
     .attr("dy", "1em")
     .style("text-anchor", "middle")
     .text("Body Mass (g)"); 
