@@ -1,9 +1,10 @@
 const penguins = d3.csv("penguins_size.csv");
 
 penguins.then(function(data) {
-  // Convert relevant string values to numbers and filter out invalid data
+  // Convert relevant string values to numbers, include species, and filter out invalid data
   data = data.map(function(d) {
     return {
+      species: d.species,
       flipper_length_mm: +d.flipper_length_mm,
       body_mass_g: +d.body_mass_g
     };
@@ -14,6 +15,10 @@ penguins.then(function(data) {
   const margin = { top: 10, right: 100, bottom: 100, left: 160 },
       width = 960 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom;
+
+  const color = d3.scaleOrdinal()
+    .domain(["Adelie", "Chinstrap", "Gentoo"]) 
+    .range(["#1f77b4", "#ff7f0e", "#2ca02c"]);
 
   const svg = d3.select("#plot")
     .attr("width", width + margin.left + margin.right)
@@ -69,7 +74,7 @@ penguins.then(function(data) {
       .attr("cx", d => x(d.flipper_length_mm))
       .attr("cy", d => y(d.body_mass_g))
       .attr("r", 5)
-      .style("fill", "#69b3a2");
+      .style("fill", d => color(d.species));
 
   // Trend Line calc
   const sumX = d3.sum(data, d => d.flipper_length_mm);
@@ -89,4 +94,23 @@ penguins.then(function(data) {
     .attr("y2", y(m * maxX + b))
     .attr("stroke", "red")
     .attr("stroke-width", 2);
+
+    const legend = svg.selectAll(".legend")
+    .data(color.domain())
+    .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", (d, i) => "translate(0," + i * 20 + ")");
+  
+  legend.append("rect")
+    .attr("x", width - 8)
+    .attr("width", 18)
+    .attr("height", 18)
+    .style("fill", color);
+  
+  legend.append("text")
+    .attr("x", width - 24)
+    .attr("y", 9)
+    .attr("dy", ".35em")
+    .style("text-anchor", "end")
+    .text(d => d);
 });

@@ -9,63 +9,80 @@
 }
 
 body {
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 0 50px;
-    
+    color: #333;
+    background: #f0f2f5; /* Light grey background */
 }
 
 nav {
+    background: #2C3E50; /* Dark blue shade */
     text-align: center;
-    padding:42px 42px;
-
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
   
 .nav-title {
-    margin-bottom: 24px;
+    color: #fff;
+    font-weight: 700;
 }
-  
+
 .nav-links {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: space-around;
-}
-  
-.nav-links a {
-    text-decoration: none;
-    color: black;
+    justify-content: center;
+    gap: 20px;
 }
 
+.nav-links a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #bdc3c7; /* Light gray for hover effect */
+}
 
 .intro-container {
     padding-top: 48px;
     padding-bottom: 48px;
 }
 
-.viz-1__graph {
-    flex: 1;
-
-}
-
-.viz-1__heading {
-    padding-bottom: 12px;
-}
-
-.viz-1__para{
-    flex: 1;
-}
-
-.viz-1__container{
-    text-align: center;
-
-}
-
-.viz-1__content {
+.viz-1__content, .viz-2__content, .viz-3__content, .viz-4__content, 
+.viz-5__content, .viz-6__content, .viz-7__content, .viz-8__content, 
+.viz-9__content, .viz-10__content, .viz-11__content {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 
+.viz-2__content, .viz-4__content, .viz-6__content, .viz-8__content, .viz-10__content {
+    flex-direction: row-reverse;
+}
 
+.viz-1__para, .viz-2__para, .viz-3__para, .viz-4__para, 
+.viz-5__para, .viz-6__para, .viz-7__para, .viz-8__para, 
+.viz-9__para, .viz-10__para, .viz-11__para {
+    flex: 1;
+    max-width: 800px;
+    margin-left: 20px; 
+    margin-right: 20px; 
+}
+
+.viz-1__heading, .viz-2__heading, .viz-3__heading, .viz-4__heading, 
+.viz-5__heading, .viz-6__heading, .viz-7__heading, .viz-8__heading, 
+.viz-9__heading, .viz-10__heading, .viz-11__heading {
+    text-align: center; /* Center the heading text */
+    padding: 10px; /* Add some padding for better spacing */
+    margin-bottom: 20px; /* Space below the heading */
+
+    color: #333; /* Optional: set a text color */
+    font-size: 18px; /* Optional: adjust font size as needed */
+}

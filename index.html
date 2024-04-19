@@ -9,23 +9,21 @@
 <nav>
     <h1 class="nav-title">Penguin Archipelago Visualization</h1>
     <ul class="nav-links">
-        <li><a href="#">Viz 1</a></li>
-        <li><a href="#">Viz 2</a></li>
-        <li><a href="#">Viz 3</a></li>
-        <li><a href="#">Viz 4</a></li>
-        <li><a href="#">Viz 5</a></li>
-        <li><a href="#">Viz 6</a></li>
+       
     </ul>
 </nav>
 <body>
 
-    <div class="intro-container">
+    <div class="intro-container" style="padding: 15px 25px; text-align: center;">
+        <h2 class="intro-heading">Overview</h2>
         <p class="intro-para">
-            In the climates of Antarctica, the adaptability and survival of penguin species are feats of evolution. 
-            Among the most telling indicators of a penguin's ability to thrive are its physical attributes— <b>culmen size</b>, 
-            <b>flipper length</b>, <b>body mass</b>, and more. These morphological characteristics are not incidental but are 
-            determinants of feeding efficiency, predator evasion, and reproductive success. This project aims to 
-            visualize the intricacies between form and function in the Palmer Archipelago's penguin populations.
+            Utilizing the detailed dataset from the Palmer Archipelago, our task is to create a series of visualizations that articulate the 
+            link between the dietary habits of Adélie, Chinstrap, and Gentoo penguins and their
+            morphological features through the lens of δ15N and δ13C isotopic signatures. Our data sourced from Kaggle, shows a comprehensive 
+            report of three main types of penguin species - Gentoo, Adelie, and Chinstrap Our data contains 17 columns of data, with 
+            344 data points for each penguins_size.csv provides us with morphological data about species type, culmen length and depth, 
+            body mass etc penguins_iter.csv extends beyond this data providing insights about dietary patterns and isotopic signatures
+            Collected by LTER: Long Term Ecological Research Network
         </p>
     </div>
    
@@ -47,15 +45,15 @@
             </div>
         </div> 
     </div>
-    <div class="viz-1__container">
-        <div class="viz-1__heading">
+    <div class="viz-2__container">
+        <div class="viz-2__heading">
             <h3>Scatter Plot of Penguin Flipper Length vs. Body Mass</h3>
         </div>
-        <div class="viz-1__content"> 
-            <div class="viz-1__graph">
-                <iframe src="island_trait_scatter.html" width="100%" height="400px"></iframe>
+        <div class="viz-2__content"> 
+            <div class="viz-2__graph">
+                <iframe src="island_trait_scatter.html" width="800px" height="400px"></iframe>
             </div>
-            <div class="viz-1__para">
+            <div class="viz-2__para">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur, 
                     adipisicing elit. Similique provident dolore harum quae numquam eligendi enim delectus perferendis, repellat cupiditate facere aut! 
                     Ipsum quidem soluta aut ipsa sit, ut vel!
@@ -63,16 +61,15 @@
             </div>
         </div> 
     </div>
-    <div class="viz-1__container">
-        <div class="viz-1__heading">
+    <div class="viz-3__container">
+        <div class="viz-3__heading">
             <h3>Scatter Plot of Penguin Flipper Length vs. Body Mass</h3>
         </div>
-        <div class="viz-1__content"> 
-            <div class="viz-1__graph">
-                <svg id="plot"></svg>
-                <script src='main.js'></script>
+        <div class="viz-3__content"> 
+            <div class="viz-3__graph">
+                <img src="/visualizations/body_mass_violin.png" style="width: 700px; height: auto;">
             </div>
-            <div class="viz-1__para">
+            <div class="viz-3__para">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur, 
                     adipisicing elit. Similique provident dolore harum quae numquam eligendi enim delectus perferendis, repellat cupiditate facere aut! 
                     Ipsum quidem soluta aut ipsa sit, ut vel!
@@ -80,16 +77,52 @@
             </div>
         </div> 
     </div>
-    <div class="viz-1__container">
-        <div class="viz-1__heading">
+    <div class="viz-4__container">
+        <div class="viz-4__heading">
             <h3>Scatter Plot of Penguin Flipper Length vs. Body Mass</h3>
         </div>
-        <div class="viz-1__content"> 
-            <div class="viz-1__graph">
-                <svg id="plot"></svg>
-                <script src='main.js'></script>
+        <div class="viz-4__content"> 
+            <div class="viz-4__graph">
+                <img src="/visualizations/cluthch_completion_static.png" style="width: 700px; height: auto;">
             </div>
-            <div class="viz-1__para">
+            <div class="viz-4__para">
+                <p>This graph shows the distribution of clutch completion among the 3 different islands. Clutch 
+                    completion is a binary variable: describing whether a ‘clutch’ or nest of penguin eggs is fully formed. 
+                    A completed clutch would indicate healthy penguins and sustainable population growth. While all 
+                    islands have a majority of completed clutches, Biscoe Island has a noticeably higher rate of clutch completion 
+                    and a lower rate of uncompleted clutches. Biscoe Island is made up of mostly Gentoo Penguins, who do not live anywhere else.
+                     We can make an educated guess that Gentoo Penguins and their environment are responsible for this high rate of clutch completion. 
+                </p>
+            </div>
+        </div> 
+    </div>
+    <div class="viz-5__container">
+        <div class="viz-5__heading">
+            <h3>Scatter Plot of Penguin Flipper Length vs. Body Mass</h3>
+        </div>
+        <div class="viz-5__content"> 
+            <div class="viz-5__graph">
+                <img src="/visualizations/correlation_matrix.png" style="width: 700px; height: auto;">
+            </div>
+            <div class="viz-5__para">
+                <p>This correlation matrix sheds light on the relationship between different penguin features. The strongest positive correlation 
+                    is between flipper length and body mass, meaning as one increases, the other will as well. Culmen, or beak, length was also 
+                    positively correlated with body mass and flipper length. While physical size being correlated is expected, a more surprising 
+                    correlation is between Delta 15 N and body mass/flipper length. With a -.54 correlation between body mass and Delta 15 N, larger 
+                    penguins tend to have lower levels of Delta 15 N. This is surprising because lower levels of Delta 15 N indicate lower placement on the food chain.
+                </p>
+            </div>
+        </div> 
+    </div>
+    <div class="viz-6__container">
+        <div class="viz-6__heading">
+            <h3>Scatter Plot of Penguin Flipper Length vs. Body Mass</h3>
+        </div>
+        <div class="viz-6__content"> 
+            <div class="viz-6__graph">
+                <img src="/visualizations/flipperlength_violin.png" style="width: 700px; height: auto;">
+            </div>
+            <div class="viz-6__para">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur, 
                     adipisicing elit. Similique provident dolore harum quae numquam eligendi enim delectus perferendis, repellat cupiditate facere aut! 
                     Ipsum quidem soluta aut ipsa sit, ut vel!
@@ -97,6 +130,114 @@
             </div>
         </div> 
     </div>
+    <div class="viz-7__container">
+        <div class="viz-7__heading">
+            <h3>Scatter Plot of Penguin Flipper Length vs. Body Mass</h3>
+        </div>
+        <div class="viz-7__content"> 
+            <div class="viz-7__graph">
+                <iframe src="/visualizations/delta13.html" width="800px" height="400px"></iframe>
+            </div>
+            <div class="viz-7__para">
+                <p>Similar to the Delta 15 N distribution graph, this is an interactive visualization that shows the 
+                    distribution of Delta 13 C among penguin species. The user can select an island to show only the 
+                    distribution of Delta 13 C on that island. Before selecting an island, the distribution of all penguins 
+                    on all islands is shown. The levels for Delta 13 C are low for all species, but on average, Chinstrap penguins 
+                    seem to have slightly higher levels. This might mean that Chinstrap Penguins have a significantly different diet than other species.
+                </p>
+            </div>
+        </div> 
+    </div>
+    <div class="viz-8__container">
+        <div class="viz-8__heading">
+            <h3>Scatter Plot of Penguin Flipper Length vs. Body Mass</h3>
+        </div>
+        <div class="viz-8__content"> 
+            <div class="viz-8__graph">
+                <iframe src="/visualizations/delta15.html" width="800px" height="400px"></iframe>
+            </div>
+            <div class="viz-8__para">
+                <p>This visualization shows the distribution of Delta 15 N among the 3 species of penguins. The user can select an island to show 
+                    only the distribution of Delta 15 N on that island. Before selecting an island, the distribution of all penguins on 
+                    all islands is shown. Gentoo penguins have lower levels of Delta 15 N, meaning that they are lower on the food chain. 
+                </p>
+            </div>
+        </div> 
+    </div>
+    <div class="viz-9__container">
+        <div class="viz-9__heading">
+            <h3>Scatter Plot of Penguin Flipper Length vs. Body Mass</h3>
+        </div>
+        <div class="viz-9__content"> 
+            <div class="viz-9__graph">
+                <iframe src="/visualizations/interactive.html" width="800px" height="400px"></iframe>
+            </div>
+            <div class="viz-9__para">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur, 
+                    adipisicing elit. Similique provident dolore harum quae numquam eligendi enim delectus perferendis, repellat cupiditate facere aut! 
+                    Ipsum quidem soluta aut ipsa sit, ut vel!
+                </p>
+            </div>
+        </div> 
+    </div>
+    <div class="viz-10__container">
+        <div class="viz-10__heading">
+            <h3>Scatter Plot of Penguin Flipper Length vs. Body Mass</h3>
+        </div>
+        <div class="viz-10__content"> 
+            <div class="viz-10__graph">
+                <iframe src="/visualizations/island_specie_stacked.html" width="800px" height="400px"></iframe>
+            </div>
+            <div class="viz-10__para">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur, 
+                    adipisicing elit. Similique provident dolore harum quae numquam eligendi enim delectus perferendis, repellat cupiditate facere aut! 
+                    Ipsum quidem soluta aut ipsa sit, ut vel!
+                </p>
+            </div>
+        </div> 
+    </div>
+    <div class="viz-11__container">
+        <div class="viz-11__heading">
+            <h3>Scatter Plot of Penguin Flipper Length vs. Body Mass</h3>
+        </div>
+        <div class="viz-11__content"> 
+            <div class="viz-11__graph">
+                <iframe src="/visualizations/penguindelta_graph.html" width="800px" height="400px"></iframe>
+            </div>
+            <div class="viz-11__para">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur, 
+                    adipisicing elit. Similique provident dolore harum quae numquam eligendi enim delectus perferendis, repellat cupiditate facere aut! 
+                    Ipsum quidem soluta aut ipsa sit, ut vel!
+                </p>
+            </div>
+        </div> 
+    </div>
+
+    <div class="summary-container" style="padding: 15px 25px; text-align: center;">
+        <h2 class="summary-heading">
+            Summary
+        </h2>
+        <p class="summary-para">
+            Our data visualization can provide deeper insight into the physical traits and dietary habits of penguin species. Our focus on the 
+            Gentoo, Chinstrap, and Adelie penguins in the Palmer Archipelago has shown that Gentoo penguins are physically larger and have a 
+            higher clutch completion. This leads us to believe Gentoo penguins are healthier and have a more sustainable population with high 
+            survival rates. We also used Delta 15 N and Delta 13 C as a measure of penguin diets, and have shown that Gentoo Penguins have lower 
+            Delta 15 N levels, while Chinstrap penguins have higher Delta 13 C levels. We were surprised about the negative correlation between 
+            Delta 15 N levels and physical traits because we assumed larger penguins would be higher on the food chain. Gentoo penguins having lower Delta 
+            15 levels could indicate them being lower on the food chain, meaning they are common prey. However, we found research to complement 
+            our surprising visualization results. According to a study from the National Library of Medicine, penguin species have been abruptly 
+            switching to lower-trophic (lower on the food chain) diets for the last 200 years. This could support our original idea that Gentoo 
+            Penguins are healthy and also have high survival rates. The low levels of Delta 15 N could be due to them switching their diets, and 
+            not due to a lack of survival on the food chain. In the future, we would like to continue this hypothesis on Gentoo penguins and other 
+            species switching their diets. Using a different dataset with more physical variables and over a larger timeline would prove necessary. 
+            It would also be interesting to use a dataset about the food hierarchy in this region to compare penguins’ traits with different animals 
+            and make inferences on survivability and competition. This project touched upon the food chain dynamic, but it would be very interesting 
+            to further this work.
+
+        </p>
+    </div>
+
+
 
 </body>
 </html>
